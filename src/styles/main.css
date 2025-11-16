@@ -1,0 +1,56 @@
+/* Main Styles - Reserva Médica */
+/* Importar todos los archivos de estilos CSS específicos */
+
+/* Medical Theme Variables */
+@import url('./medical-theme.css');
+
+/* Layout Utilities */
+@import url('./layout.css');
+
+/* Component Specific Styles */
+@import url('./login.css');
+@import url('./register.css');
+@import url('./dashboard.css');
+@import url('./appointments.css');
+
+/* Animation Effects */
+@import url('./animations.css');
+
+/* Global Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--medical-500);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

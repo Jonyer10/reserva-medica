@@ -1,0 +1,117 @@
+/* Medical Theme Variables */
+:root {
+  /* Medical Colors */
+  --medical-50: #f0f9ff;
+  --medical-100: #e0f2fe;
+  --medical-200: #bae6fd;
+  --medical-300: #7dd3fc;
+  --medical-400: #38bdf8;
+  --medical-500: #0ea5e9;
+  --medical-600: #0284c7;
+  --medical-700: #0369a1;
+  --medical-800: #075985;
+  --medical-900: #0c4a6e;
+  
+  /* Medical Pattern */
+  --medical-pattern: radial-gradient(circle at 1px 1px, rgba(14, 165, 233, 0.1) 1px, transparent 0);
+  --medical-pattern-size: 20px 20px;
+  
+  /* Medical Shadows */
+  --medical-shadow-sm: 0 1px 2px 0 rgba(14, 165, 233, 0.05);
+  --medical-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1), 0 2px 4px -1px rgba(14, 165, 233, 0.06);
+  --medical-shadow-lg: 0 10px 15px -3px rgba(14, 165, 233, 0.1), 0 4px 6px -2px rgba(14, 165, 233, 0.05);
+  --medical-shadow-xl: 0 20px 25px -5px rgba(14, 165, 233, 0.1), 0 10px 10px -5px rgba(14, 165, 233, 0.04);
+  --medical-shadow-2xl: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+}
+
+/* Medical Background Pattern */
+.bg-medical-pattern {
+  background-image: var(--medical-pattern);
+  background-size: var(--medical-pattern-size);
+}
+
+/* Medical Avatar Glow Effect */
+.medical-avatar-glow {
+  box-shadow: 
+    0 0 20px rgba(14, 165, 233, 0.3),
+    0 0 40px rgba(14, 165, 233, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Medical Gradient Backgrounds */
+.bg-medical-gradient {
+  background: linear-gradient(135deg, var(--medical-500), var(--medical-600), var(--medical-700));
+}
+
+.bg-medical-gradient-soft {
+  background: linear-gradient(135deg, var(--medical-50), var(--medical-100), var(--medical-200));
+}
+
+/* Medical Button Styles */
+.btn-medical {
+  background: linear-gradient(to right, var(--medical-500), var(--medical-600), var(--medical-700));
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: var(--medical-shadow-lg);
+  transition: all 300ms ease;
+  transform: translateY(0);
+}
+
+.btn-medical:hover {
+  background: linear-gradient(to right, var(--medical-600), var(--medical-700), var(--medical-800));
+  box-shadow: var(--medical-shadow-2xl);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-medical:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-medical:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Medical Input Styles */
+.input-medical {
+  appearance: none;
+  border-radius: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  background-color: rgba(248, 250, 252, 0.5);
+  color: #1e293b;
+  font-weight: 500;
+  transition: all 300ms ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-medical:focus {
+  outline: none;
+  border-color: var(--medical-400);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-medical:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Medical Card Styles */
+.card-medical {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--medical-shadow-xl);
+  transition: all 300ms ease;
+}
+
+.card-medical:hover {
+  box-shadow: var(--medical-shadow-2xl);
+  transform: translateY(-2px);
+}
