@@ -135,7 +135,7 @@ export class DemoMedicalAppointmentRepository extends IMedicalAppointmentReposit
     }
   }
 
-  async confirmAppointment(appointmentId, userId) {
+  async confirmAppointment(_appointmentId, _userId) {
     try {
       // Para demo, simulamos confirmación
       await new Promise(resolve => setTimeout(resolve, 500));

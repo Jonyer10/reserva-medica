@@ -99,7 +99,7 @@ export const RegisterForm = () => {
 
       setFormState(FORM_STATES.SUCCESS);
       setIsRegistered(true);
-    } catch (err) {
+    } catch (_err) {
       setFormState(FORM_STATES.ERROR);
     }
   };

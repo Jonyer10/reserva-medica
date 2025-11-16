@@ -28,20 +28,16 @@ export const useAuthOperations = () => {
 
   // Función mejorada de login con manejo de "recordarme"
   const loginWithRemember = async (email, password, remember = false) => {
-    try {
-      const result = await auth.login(email, password);
-      
-      if (remember) {
-        await storageService.setItem('remember_email', email);
-      } else {
-        await storageService.removeItem('remember_email');
-      }
-      
-      setRememberEmail(remember ? email : '');
-      return result;
-    } catch (error) {
-      throw error;
+    const result = await auth.login(email, password);
+    
+    if (remember) {
+      await storageService.setItem('remember_email', email);
+    } else {
+      await storageService.removeItem('remember_email');
     }
+    
+    setRememberEmail(remember ? email : '');
+    return result;
   };
 
   // Función de logout con limpieza completa
@@ -71,7 +67,7 @@ export const useAuthOperations = () => {
       const fiveMinutes = 5 * 60 * 1000;
 
       return (expiry - now) < fiveMinutes;
-    } catch (error) {
+    } catch (_error) {
       return false;
     }
   };
@@ -88,7 +84,7 @@ export const useAuthOperations = () => {
       }
       
       return false;
-    } catch (error) {
+    } catch (_error) {
       // Si falla la renovación, hacer logout
       await logoutCompletely();
       return false;

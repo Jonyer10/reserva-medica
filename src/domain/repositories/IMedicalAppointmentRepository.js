@@ -5,87 +5,87 @@
 export class IMedicalAppointmentRepository {
   /**
    * Obtiene todas las citas de un usuario
-   * @param {string} userId 
+   * @param {string} _userId 
    * @returns {Promise<MedicalAppointment[]>}
    */
-  async getUserAppointments(userId) {
+  async getUserAppointments(_userId) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Obtiene una cita por su ID
-   * @param {string} appointmentId 
+   * @param {string} _appointmentId 
    * @returns {Promise<MedicalAppointment>}
    */
-  async getAppointmentById(appointmentId) {
+  async getAppointmentById(_appointmentId) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Crea una nueva cita médica
-   * @param {Object} appointmentData 
+   * @param {Object} _appointmentData 
    * @returns {Promise<MedicalAppointment>}
    */
-  async createAppointment(appointmentData) {
+  async createAppointment(_appointmentData) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Actualiza una cita existente
-   * @param {string} appointmentId 
-   * @param {Object} appointmentData 
+   * @param {string} _appointmentId 
+   * @param {Object} _appointmentData 
    * @returns {Promise<MedicalAppointment>}
    */
-  async updateAppointment(appointmentId, appointmentData) {
+  async updateAppointment(_appointmentId, _appointmentData) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Cancela una cita médica
-   * @param {string} appointmentId 
+   * @param {string} _appointmentId 
    * @returns {Promise<void>}
    */
-  async cancelAppointment(appointmentId) {
+  async cancelAppointment(_appointmentId) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Reagenda una cita médica
-   * @param {string} appointmentId 
-   * @param {Date} newDateTime 
+   * @param {string} _appointmentId 
+   * @param {Date} _newDateTime 
    * @returns {Promise<MedicalAppointment>}
    */
-  async rescheduleAppointment(appointmentId, newDateTime) {
+  async rescheduleAppointment(_appointmentId, _newDateTime) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Obtiene las citas próximas del usuario
-   * @param {string} userId 
-   * @param {number} days - número de días hacia adelante
+   * @param {string} _userId 
+   * @param {number} _days - número de días hacia adelante
    * @returns {Promise<MedicalAppointment[]>}
    */
-  async getUpcomingAppointments(userId, days = 30) {
+  async getUpcomingAppointments(_userId, _days = 30) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Obtiene los doctores disponibles para una especialidad
-   * @param {string} specialty 
-   * @param {Date} date 
+   * @param {string} _specialty 
+   * @param {Date} _date 
    * @returns {Promise<Doctor[]>}
    */
-  async getAvailableDoctors(specialty, date) {
+  async getAvailableDoctors(_specialty, _date) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Obtiene los horarios disponibles de un doctor
-   * @param {string} doctorId 
-   * @param {Date} date 
+   * @param {string} _doctorId 
+   * @param {Date} _date 
    * @returns {Promise<string[]>}
    */
-  async getAvailableTimeSlots(doctorId, date) {
+  async getAvailableTimeSlots(_doctorId, _date) {
     throw new Error('Method not implemented');
   }
 }

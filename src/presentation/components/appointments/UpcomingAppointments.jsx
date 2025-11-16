@@ -244,7 +244,7 @@ export const UpcomingAppointments = ({
 const RescheduleModal = ({ appointment, onReschedule, onClose, isLoading }) => {
   const [newDate, setNewDate] = useState("");
   const [newTime, setNewTime] = useState("");
-  const [availableSlots, setAvailableSlots] = useState([]);
+  const [_availableSlots, setAvailableSlots] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

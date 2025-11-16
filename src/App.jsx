@@ -16,6 +16,7 @@ import { configureApplication } from "./shared/config/applicationConfig";
 import { LoginForm } from "./presentation/components/auth/Login";
 import { RegisterForm } from "./presentation/components/auth/RegisterForm";
 import { Dashboard } from "./presentation/pages/Dashboard";
+import { Agendar } from "./presentation/pages/agendar";
 import { ProtectedRoute } from "./presentation/components/auth/ProtectedRoute";
 
 // CSS
@@ -92,22 +93,7 @@ function App() {
                 path="/appointments/new"
                 element={
                   <ProtectedRoute>
-                    <div className="min-h-screen flex items-center justify-center">
-                      <div className="text-center">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                          Agendar Nueva Cita
-                        </h2>
-                        <p className="text-gray-600 mb-4">
-                          Formulario en desarrollo
-                        </p>
-                        <a
-                          href="/dashboard"
-                          className="text-blue-600 hover:text-blue-700 font-medium"
-                        >
-                          ← Volver al Dashboard
-                        </a>
-                      </div>
-                    </div>
+                    <Agendar />
                   </ProtectedRoute>
                 }
               />

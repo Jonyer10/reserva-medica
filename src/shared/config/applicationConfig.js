@@ -170,7 +170,7 @@ const setupRequestInterceptors = (httpService) => {
     (response) => {
       // Calcular tiempo de respuesta
       const endTime = Date.now();
-      const duration = endTime - response.config.metadata?.startTime;
+      const _duration = endTime - response.config.metadata?.startTime;
       
       // Enviar métricas (en producción se enviaría a un servicio de analytics)
       if (import.meta.env.MODE === 'production') {
@@ -182,7 +182,7 @@ const setupRequestInterceptors = (httpService) => {
     (error) => {
       // Tracking de errores
       const endTime = Date.now();
-      const duration = endTime - (error.config?.metadata?.startTime || endTime);
+      const _duration = endTime - (error.config?.metadata?.startTime || endTime);
       
       if (import.meta.env.MODE === 'production') {
         // analytics.track('api_error', { method, url, duration, status: error.response?.status });

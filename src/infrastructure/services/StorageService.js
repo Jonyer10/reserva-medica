@@ -13,7 +13,7 @@ class LocalStorageService {
       localStorage.setItem(test, 'test');
       localStorage.removeItem(test);
       return true;
-    } catch (e) {
+    } catch (_e) {
       return false;
     }
   }
@@ -101,7 +101,7 @@ class LocalStorageService {
     
     let size = 0;
     for (const key in localStorage) {
-      if (localStorage.hasOwnProperty(key)) {
+      if (Object.prototype.hasOwnProperty.call(localStorage, key)) {
         size += localStorage[key].length + key.length;
       }
     }

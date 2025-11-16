@@ -6,20 +6,20 @@
 export class IAuthRepository {
   /**
    * Inicia sesión con email y contraseña
-   * @param {string} email 
-   * @param {string} password 
+   * @param {string} _email 
+   * @param {string} _password 
    * @returns {Promise<{user: User, token: string}>}
    */
-  async login(email, password) {
+  async login(_email, _password) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Registra un nuevo usuario
-   * @param {Object} userData 
+   * @param {Object} _userData 
    * @returns {Promise<User>}
    */
-  async register(userData) {
+  async register(_userData) {
     throw new Error('Method not implemented');
   }
 
@@ -41,38 +41,38 @@ export class IAuthRepository {
 
   /**
    * Actualiza el perfil del usuario
-   * @param {Object} userData 
+   * @param {Object} _userData 
    * @returns {Promise<User>}
    */
-  async updateProfile(userData) {
+  async updateProfile(_userData) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Solicita reseteo de contraseña
-   * @param {string} email 
+   * @param {string} _email 
    * @returns {Promise<void>}
    */
-  async requestPasswordReset(email) {
+  async requestPasswordReset(_email) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Resetea la contraseña
-   * @param {string} token 
-   * @param {string} newPassword 
+   * @param {string} _token 
+   * @param {string} _newPassword 
    * @returns {Promise<void>}
    */
-  async resetPassword(token, newPassword) {
+  async resetPassword(_token, _newPassword) {
     throw new Error('Method not implemented');
   }
 
   /**
    * Verifica si el token es válido
-   * @param {string} token 
+   * @param {string} _token 
    * @returns {Promise<boolean>}
    */
-  async verifyToken(token) {
+  async verifyToken(_token) {
     throw new Error('Method not implemented');
   }
 }

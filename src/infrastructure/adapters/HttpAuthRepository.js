@@ -92,7 +92,7 @@ export class HttpAuthRepository extends IAuthRepository {
       const response = await this.httpService.post('/auth/verify-token', { token });
       
       return response.valid;
-    } catch (error) {
+    } catch (_error) {
       return false;
     }
   }

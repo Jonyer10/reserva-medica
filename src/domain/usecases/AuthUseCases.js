@@ -103,7 +103,7 @@ export class AuthUseCases {
       if (!token) return false;
 
       return await this.authRepository.verifyToken(token);
-    } catch (error) {
+    } catch (_error) {
       return false;
     }
   }

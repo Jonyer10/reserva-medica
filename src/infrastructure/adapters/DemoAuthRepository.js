@@ -81,7 +81,7 @@ export class DemoAuthRepository extends IAuthRepository {
     }
   }
 
-  async resetPassword(token, newPassword) {
+  async resetPassword(token, _newPassword) {
     try {
       // Simular delay
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -98,7 +98,7 @@ export class DemoAuthRepository extends IAuthRepository {
       // En modo demo, verificar si existe el token en localStorage
       const savedToken = localStorage.getItem('medical_token');
       return savedToken === token && !!token;
-    } catch (error) {
+    } catch (_error) {
       return false;
     }
   }
@@ -106,7 +106,7 @@ export class DemoAuthRepository extends IAuthRepository {
   async isAuthenticated() {
     try {
       return await this.authService.isAuthenticated();
-    } catch (error) {
+    } catch (_error) {
       return false;
     }
   }
